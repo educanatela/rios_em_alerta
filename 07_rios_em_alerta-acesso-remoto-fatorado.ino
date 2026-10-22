@@ -45,6 +45,9 @@ void conectarWiFi() {
 //Detecta a distância lida pelo sensor
 void lerDistancia() {
   distancia = sensor.read();
+  if(distancia > 100){
+    distancia = 100;
+  }
   controlarLED();
 }
 
@@ -133,6 +136,6 @@ void setup() {
 
 void loop() {  
   lerDistancia();
-  delay(100);
+  delay(1000);
   controlarBuzzer();
 }
