@@ -4,8 +4,8 @@
 #include <Ultrasonic.h>
 
 //CONFIGURAÇÃO DO WI-FI
-const char* ssid = "Wifi da Prof";
-const char* senha = "agi8vum642@";
+const char* ssid = "nome da rede";
+const char* senha = "senha da rede";
 //ENDEREÇO DA API
 const char* API_URL = "http://localhost:5500";
 
