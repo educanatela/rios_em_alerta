@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rios em Alerta</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="titulo-area">
+            <h1>Rios em Alerta</h1>
+
+            <p>
+                Monitoramento do nível da água em tempo real
+            </p>
+        </div>
+
+        <div class="conexao">
+            <span id="indicadorConexao"></span>
+
+            <span id="textoConexao">
+                Aguardando conexão
+            </span>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- STATUS PRINCIPAL -->
+
+        <section class="status-card" id="statusCard">
+
+            <div class="status-icone" id="statusIcone">
+                ●
+            </div>
+
+            <div class="status-informacao">
+
+                <span class="status-label">
+                    STATUS ATUAL
+                </span>
+
+                <h2 id="status">
+                    AGUARDANDO
+                </h2>
+
+                <p id="mensagemStatus">
+                    Aguardando dados do sensor...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DADOS -->
+
+        <section class="dados">
+
+            <div class="card">
+
+                <span class="card-titulo">
+                    DISTÂNCIA
+                </span>
+
+                <div class="valor">
+
+                    <span id="distancia">
+                        --
+                    </span>
+
+                    <span class="unidade">
+                        cm
+                    </span>
+
+                </div>
+
+                <p>
+                    Distância medida pelo sensor
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="card-titulo">
+                    NÍVEL
+                </span>
+
+                <div class="valor">
+
+                    <span id="nivel">
+                        --
+                    </span>
+
+                    <span class="unidade">
+                        %
+                    </span>
+
+                </div>
+
+                <p>
+                    Estimativa do nível representado
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="card-titulo">
+                    ÚLTIMA LEITURA
+                </span>
+
+                <div class="valor hora">
+
+                    <span id="hora">
+                        --
+                    </span>
+
+                </div>
+
+                <p>
+                    Atualização do sistema
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- INDICADOR -->
+        <section class="nivel-container">
+
+            <div class="secao-titulo">
+                <h2>Nível da água</h2>
+                <span id="porcentagem">0% </span>
+            </div>
+
+            <div class="barra">
+                <div class="barra-progresso" id="barraProgresso"></div>
+            </div>
+
+            <div class="legenda">
+                <span class="normal"> ● Normal </span>
+                <span class="atencao"> ● Atenção </span>
+                <span class="alerta"> ● Alerta </span>
+            </div>
+
+        </section>
+
+        <!-- INFORMAÇÕES -->
+
+        <section class="informacoes">
+            <h2>Sobre o monitoramento</h2>
+            <p>
+                O sistema utiliza um sensor ultrassônico para
+                medir a distância até a superfície monitorada.
+                Essa leitura é transformada em uma informação
+                sobre o nível da água e comunicada pelo painel.
+            </p>
+            <p class="observacao">
+                <strong>Importante:</strong>
+                as faixas utilizadas neste protótipo são
+                referências didáticas e não representam
+                níveis oficiais de alerta de enchentes.
+            </p>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Rios em Alerta - Protótipo</p>
+        <p>© Todos os direitos reservados. 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
